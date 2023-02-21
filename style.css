@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@700&family=Noto+Sans+Syloti+Nagri&family=Seaweed+Script&display=swap');
+@media screen and (min-width:71px) and (max-width:2024px) {}
+    
+
 body{
     background-image: url(img/Mano-pintando-un-cuadro.webp);
     background-repeat: no-repeat;
     margin: 0%;
-    
     background-size: 100%;
+    
 }
 .derecha{
     display: flex;
@@ -21,49 +24,113 @@ body{
     cursor: pointer;
     font-family: 'Anton', sans-serif;
     font-size: 1rem;
+    color: white;
+    display:inline-block
 }
+.espacio:hover {
+    background: black; /* color de fuente hover */
+    border-color: white;
+  }
+
 
 .menu{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    background: rgba(19, 55, 214, 0.7);
+    background-color: blue;
     font-family: 'Anton', sans-serif;
+    opacity: 0.7;
+    
     
 }
+
+
 .pintura{
     width: 80%;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    font-size: 2rem;
+    padding-left: 10%;
 
 }
+
 .cuerpo{
     height: 50%;
     display: flex;
     justify-content: space-around;
-    padding: 5% 10%;
-
+    padding: 0% 10%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    /* si algo aqui hay arreglos en fle wrap, align items */
+    
 }
+
 #paint{
-    width: 100%;
+    width: 500px;
     display: flex;
+    justify-content: flex-start;
+    height: 500px;
+    padding-top: 5%;
+    margin-bottom: 4%;
     
 }
 .texto{
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: flex-start;
     padding: 0% 10% 0% 20%;
     background-color: rgba(0, 0, 0, 0.445);
     color: white;
+    width: 500px;
+    height: 600px;
+    margin-left: 2%;
+    
+    
 }
 .titulo{
     font-family: 'Anton', sans-serif;
     font-size: 4rem;
     padding-bottom: -6%;
+    
+   
 }
 .parrafo{
     font-size: 1.2rem;
-    padding-top: -100%;
+    padding-bottom: 10%;
+}
+.scrool{
+    width:500px; height:415px; overflow: scroll;
+   
+}
+#imagen{
+    border-radius: 50%;
+    width: 20%;
+    height: 90%;
+    justify-content: space-around;
+    display: flex;
+
+}
+.abajo{
+    display: flex;
+    justify-content: flex-end;
+    align-items:start;
+    
+    padding-right: 30%;
+    padding-top: 15%;
+}
+.click{
+    font-size: 2rem;
+}
+footer{
+    background-color: white;
+    height:8em;
+    display: flex;
+    align-items: center;
+    margin-top: 3%;
+}
+.creditos{
+   display: flex;
+  margin-left: 60%;
 }
