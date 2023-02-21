@@ -3,10 +3,8 @@
     
 
 body{
-    background-image: url(img/Mano-pintando-un-cuadro.webp);
-    background-repeat: no-repeat;
+    background-color: black;
     margin: 0%;
-    background-size: 100%;
     
 }
 .derecha{
@@ -33,25 +31,51 @@ body{
   }
 
 
-.menu{
+.menu {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     background-color: blue;
     font-family: 'Anton', sans-serif;
     opacity: 0.7;
+    width: 100%;
+    object-fit: fill;
     
     
 }
 
 
+.pe{
+        width: 50px;
+        position: absolute;
+        fill: black;
+        visibility: collapse;
+    }
+@media (max-width: 1000px){
+    .pe{
+        display: flex;
+        visibility: visible;
+        margin-top: 6%;
+        padding-left: 50%;
+        
+    }
+    .derecha{
+        visibility: collapse;
+       
+    }
+    .pintura{
+        margin-left: 40%;
+    }
+    
+}
 .pintura{
     width: 80%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     font-size: 2rem;
-    padding-left: 10%;
+    padding-left: 20%;
+    color: white;
 
 }
 
@@ -74,14 +98,17 @@ body{
     height: 500px;
     padding-top: 5%;
     margin-bottom: 4%;
+    object-fit: cover;
     
 }
+
+
 .texto{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     padding: 0% 10% 0% 20%;
-    background-color: rgba(0, 0, 0, 0.445);
+    background-color: rgba(11, 70, 197, 0.445);
     color: white;
     width: 500px;
     height: 600px;
@@ -101,7 +128,9 @@ body{
     padding-bottom: 10%;
 }
 .scrool{
-    width:500px; height:415px; overflow: scroll;
+    width:500px;
+    height:415px; 
+    overflow-y: scroll;
    
 }
 #imagen{
@@ -125,12 +154,29 @@ body{
 }
 footer{
     background-color: white;
-    height:8em;
+    height:6em;
     display: flex;
     align-items: center;
     margin-top: 3%;
+    
+    
+}
+@media (max-width: 900px){
+    footer{
+        height:8em;
+    display: flex;
+    align-items: center;
+    margin-top: 3%;
+    width: 100%;
+    visibility:visible;
+    }    
 }
 .creditos{
    display: flex;
   margin-left: 60%;
+  flex-direction: column;
+}
+#copy{
+    display: flex;
+
 }
