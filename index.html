@@ -6,31 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lapagina</title>
     <link rel="stylesheet" href="style.css">
-
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body>
-    
-    <header class="barra">
-        
-        <section>
-            
-            <nav class="menu">
-                
-                <svg  class="pe" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
-                <h1 class="pintura">Pintura</h1>
-                
-                <div class=" derecha">
-                    
-                    <button  class="espacio">Menu</button>
-                    <button class="espacio">Inicio</button>
-                    <button class="espacio">Text</button>
-                    <button class="espacio">Computador</button>
-                    <button class="espacio"> Paint</button>
-                </div>
-            </nav>
-        </section>
-        
-    </header>
+  <header x-data="{ open: false }" class="header">
+    <div class="header__logo">
+      Paint
+    </div>
+    <button class="header__button-nav--open" x-on:click="open = true">Abrir</button>
+    <nav class="nav" x-bind:class="open ? 'nav--show' : ''">
+      <div class="nav__button" x-on:click="open = false">
+        <button class="header__button-nav--close">Cerrar</button>
+      </div>
+      <ul class="nav__ul">
+        <li class="nav__item"><a href="#" class="nav__link">Menu</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Incio</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Paint</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Contactos</a></li>
+      </ul>
+    </nav>
+  </header>
+  
     <section class="cuerpo">
         <img id="paint" src="img/beneficios-pintar-XxXx80.jpg" >
         <div class="texto">
